@@ -1,0 +1,23 @@
+.profile__info {
+  display: flex;
+}
+
+.profile__editLink {
+  align-self: start;
+  margin-top: 17px;
+  margin-left: 18px;
+}
+
+.profile__editButton {
+  transition: 0.3s;
+}
+
+.profile__editButton:hover {
+  opacity: 0.6;
+}
+
+.popupLink {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

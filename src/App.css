@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:400,500,900);
+* {
+  box-sizing: border-box;
+}
+.root {
+  background-color: #000000;
+  overflow-x: hidden;
+  margin: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 10px;
+}

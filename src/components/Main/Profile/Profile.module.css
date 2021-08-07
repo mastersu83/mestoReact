@@ -1,0 +1,40 @@
+.profile {
+}
+
+.profile__wrapper {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(min-content, max-content)) minmax(
+      min-content,
+      auto
+    );
+  align-items: center;
+  column-gap: 30px;
+}
+
+.profile__avatar {
+  align-self: start;
+}
+
+.profile__add {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile__addButton {
+  padding: 14px 64px;
+  border: 1px solid #ffffff;
+  transition: all 0.5s ease;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.profile__addButton:hover {
+  opacity: 0.6;
+}
+
+.popupLink {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
