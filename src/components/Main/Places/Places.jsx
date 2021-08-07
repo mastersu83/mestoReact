@@ -2,7 +2,7 @@ import classes from "./Places.module.css";
 import PlacesItem from "./PlacesItem/PlacesItem";
 
 const Places = (props) => {
-  let newItem = props.state.map((p) => (
+  let newItem = props.state.item.map((p) => (
     <PlacesItem place={p.name} link={p.link} />
   ));
   return (
