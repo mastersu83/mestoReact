@@ -3,7 +3,7 @@ import closeIcon from "../../img/close-icon.svg";
 
 const Popup = (props) => {
   return (
-    <div className={`popup popupEdit ${props.state ? "open" : " "}`}>
+    <div className={`popup popupEdit ${props.isOpened ? "open" : " "}`}>
       <div className="popup__body">
         <div className="popup__content popup__contentEdit">
           <img
@@ -42,6 +42,7 @@ const Popup = (props) => {
             </form>
           </div>
         </div>
+        <div className="overlay" onClick={props.onPopupClose}></div>
       </div>
     </div>
   );

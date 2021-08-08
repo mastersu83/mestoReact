@@ -6,7 +6,12 @@ const Header = (props) => {
     <header className="header">
       <div className="container">
         <div className={classes.header__wrapper}>
-            <img className={classes.header__logo} src={logo} alt="logo" />
+          <img
+            className={classes.header__logo}
+            src={logo}
+            alt="logo"
+            onClick={props.isOpened}
+          />
         </div>
       </div>
     </header>
