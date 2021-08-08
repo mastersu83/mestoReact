@@ -1,7 +1,7 @@
 import "./Popup.css";
 import closeIcon from "../../img/close-icon.svg";
 
-const Popup = (props) => {
+const PopupAdd = (props) => {
   return (
     <div className={`popup popupEdit ${props.isOpened ? "open" : "close"}`}>
       <div className="popup__body">
@@ -14,13 +14,13 @@ const Popup = (props) => {
           />
           <div className="popup__inner">
             <form id="formEdit" className="popup__formEdit">
-              <div className="popup__title">Редактировать профиль</div>
+              <div className="popup__title">Новое место</div>
               <input
                 id="input-name"
                 className="popup__input-nameEdit popup__input"
                 form="formEdit"
                 type="text"
-                placeholder="Введите имя"
+                placeholder="Название"
                 required
               />
               <input
@@ -28,7 +28,7 @@ const Popup = (props) => {
                 className="popup__input-postEdit popup__input"
                 form="formEdit"
                 type="text"
-                placeholder="Расскажите о себе"
+                placeholder="Ссылка на картинку"
                 required
               />
               <button
@@ -48,4 +48,4 @@ const Popup = (props) => {
   );
 };
 
-export default Popup;
+export default PopupAdd;

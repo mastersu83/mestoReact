@@ -1,0 +1,36 @@
+import classes from "./Profile.module.css";
+import addBtn from "../../../img/add-btn.svg";
+import PopupAdd from "../../Popup/PopupAdd";
+import { useState } from "react";
+
+const AddPopup = (props) => {
+  const [popup, setPopup] = useState({
+    popup: false,
+  });
+  return (
+    <div className={classes.profile__add}>
+      <button
+        className={`${classes.popupLinkAdd} ${classes.popupLink}`}
+        onClick={() =>
+          setPopup({
+            ...popup,
+            popup: true,
+          })
+        }
+      >
+        <img className={classes.profile__addButton} src={addBtn} alt="" />
+      </button>
+      <PopupAdd
+        isOpened={popup.popup}
+        onPopupClose={() =>
+          setPopup({
+            ...popup,
+            popup: false,
+          })
+        }
+      />
+    </div>
+  );
+};
+
+export default AddPopup;
