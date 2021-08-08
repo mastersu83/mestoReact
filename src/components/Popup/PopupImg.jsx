@@ -2,7 +2,6 @@ import "./Popup.css";
 import closeIcon from "../../img/close-icon.svg";
 
 const PopupImg = (props) => {
-
   return (
     <div
       className={`popup close-popup popupImg ${
