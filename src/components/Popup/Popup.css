@@ -21,13 +21,13 @@
 
 .close {
   opacity: 0;
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
   visibility: hidden;
 }
 
 .popup.open {
   opacity: 1;
-  transition: all 0.3s ease 0s;
+  transition: all 0.5s ease 0s;
   visibility: visible;
 }
 
@@ -120,7 +120,7 @@
 }
 
 .popupImg__name {
-  font-size: 12px;
+  font-size: 20px;
   line-height: 15px;
   margin: 0;
   padding: 0;

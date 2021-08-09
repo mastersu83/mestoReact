@@ -8,7 +8,7 @@ const Profile = (props) => {
     <div className={classes.profile}>
       <div className={classes.profile__wrapper}>
         <img className={classes.profile__avatar} src={avatar} alt="avatar" />
-        <ProfileInfo state={props.state.popupEvent} />
+        <ProfileInfo state={props.state} />
         <AddPopup />
       </div>
     </div>

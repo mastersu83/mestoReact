@@ -10,7 +10,7 @@ const ProfileInfo = (props) => {
   });
   return (
     <div className={classes.profile__info}>
-      <ProfileData />
+      <ProfileData profileData={props.state.profileData} />
       <div className={classes.profile__editLink}>
         <button
           className={`${classes.popupLinkEdit} ${classes.popupLink}`}

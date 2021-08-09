@@ -4,10 +4,10 @@ const ProfileData = (props) => {
   return (
     <div className={classes.profile__data}>
       <h2 id="name" className={classes.profile__name}>
-        Жак-Ив Кусто
+        {props.profileData.name}
       </h2>
       <span id="post" className={classes.profile__post}>
-        Исследователь океана
+        {props.profileData.post}
       </span>
     </div>
   );
