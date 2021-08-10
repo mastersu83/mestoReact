@@ -1,3 +1,5 @@
+import { rerenderEntireTree } from "../render";
+
 let state = {
   item: [
     {
@@ -25,10 +27,43 @@ let state = {
       link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
     },
   ],
-  profileData: {
-    name: "Жак-Ив Кусто",
-    post: "Исследователь океана",
-  },
+  name: "Жак-Ив Кусто",
+  post: "Исследователь океана",
+};
+
+window.state = state;
+
+export let addPlace = (newNameText, newLinkText) => {
+  let newPlace = {
+    name: newNameText,
+    link: newLinkText,
+  };
+  state.item.unshift(newPlace);
+  rerenderEntireTree(state);
+};
+
+export let addPost = (newNameText, newPostText) => {
+  // let newItem = {
+  //   name: newNameText,
+  //   link: newPostText,
+  // };
+  state.name = newNameText;
+  state.post = newPostText;
+  rerenderEntireTree(state);
+};
+
+export let removeItem = () => {
+  state.item.pop();
+  rerenderEntireTree(state);
+};
+
+export let updateNewName = (newText) => {
+  state.name = newText;
+  rerenderEntireTree(state);
+};
+export let updateNewPost = (newText) => {
+  state.post = newText;
+  rerenderEntireTree(state);
 };
 
 export default state;

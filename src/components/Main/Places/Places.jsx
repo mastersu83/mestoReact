@@ -3,7 +3,7 @@ import PlacesItem from "./PlacesItem/PlacesItem";
 
 const Places = (props) => {
   let newItem = props.state.item.map((p) => (
-    <PlacesItem place={p.name} link={p.link} />
+    <PlacesItem removeItem={props.removeItem} place={p.name} link={p.link} />
   ));
 
   return (
