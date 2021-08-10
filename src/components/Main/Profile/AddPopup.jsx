@@ -1,7 +1,7 @@
 import classes from "./Profile.module.css";
 import addBtn from "../../../img/add-btn.svg";
 import PopupAdd from "../../Popup/PopupAdd";
-import { useState } from "react";
+import React, { useState } from "react";
 
 const AddPopup = (props) => {
   const [popup, setPopup] = useState({
@@ -28,6 +28,11 @@ const AddPopup = (props) => {
             popup: false,
           })
         }
+        state={props.state}
+        updateNewName={props.updateNewName}
+        updateNewPost={props.updateNewPost}
+        addPost={props.addPost}
+        addPlace={props.addPlace}
       />
     </div>
   );

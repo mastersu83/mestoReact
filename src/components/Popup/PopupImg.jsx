@@ -19,8 +19,8 @@ const PopupImg = (props) => {
             onClick={props.onPopupClose}
           />
         </div>
-        <div className="overlay" onClick={props.onPopupClose}></div>
       </div>
+      <div className="overlay" onClick={props.onPopupClose} />
     </div>
   );
 };
