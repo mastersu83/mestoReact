@@ -11,7 +11,7 @@ const Profile = (props) => {
         <img className={classes.profile__avatar} src={avatar} alt="avatar" />
         <ProfileInfo
           state={props.state}
-          updateNewName={props.updateNewName}
+          updateProfile={props.updateProfile}
           updateNewPost={props.updateNewPost}
           addPost={props.addPost}
           addPlace={props.addPlace}

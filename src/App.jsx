@@ -10,7 +10,7 @@ function App(props) {
       <Header />
       <Main
         state={props.state}
-        updateNewName={props.updateNewName}
+        updateProfile={props.updateProfile}
         updateNewPost={props.updateNewPost}
         addPost={props.addPost}
         addPlace={props.addPlace}

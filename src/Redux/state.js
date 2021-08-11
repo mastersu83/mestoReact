@@ -27,6 +27,8 @@ let state = {
       link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
     },
   ],
+  newProfileName: "",
+  newProfilePost: "",
   name: "Жак-Ив Кусто",
   post: "Исследователь океана",
 };
@@ -57,8 +59,9 @@ export let removeItem = () => {
   rerenderEntireTree(state);
 };
 
-export let updateNewName = (newText) => {
-  state.name = newText;
+export let updateProfile = (newNameTextChange, newPostTextChange) => {
+  state.newProfileName = newNameTextChange;
+  state.newProfilePost = newPostTextChange;
   rerenderEntireTree(state);
 };
 export let updateNewPost = (newText) => {

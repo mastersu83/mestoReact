@@ -7,8 +7,8 @@ import {
   addPlace,
   addPost,
   removeItem,
-  updateNewName,
   updateNewPost,
+  updateProfile,
 } from "./Redux/state";
 
 export let rerenderEntireTree = (state) => {
@@ -17,7 +17,7 @@ export let rerenderEntireTree = (state) => {
       <BrowserRouter>
         <App
           state={state}
-          updateNewName={updateNewName}
+          updateProfile={updateProfile}
           updateNewPost={updateNewPost}
           addPost={addPost}
           addPlace={addPlace}

@@ -12,6 +12,12 @@ const Popup = (props) => {
     props.addPost(newNameText, newPostText);
   };
 
+  let onProfileChange = () => {
+    let newNameTextChange = newName.current.value;
+    let newPostTextChange = newPost.current.value;
+    props.updateProfile(newNameTextChange, newPostTextChange);
+  };
+
   return (
     <div className={`popup popupEdit ${props.isOpened ? "open" : " "}`}>
       <div className="popup__body">
@@ -33,6 +39,8 @@ const Popup = (props) => {
                 placeholder="Введите имя"
                 required
                 ref={newName}
+                onChange={onProfileChange}
+                value={props.state.newProfileName}
               />
               <input
                 id="input-post"
@@ -42,6 +50,8 @@ const Popup = (props) => {
                 placeholder="Расскажите о себе"
                 required
                 ref={newPost}
+                onChange={onProfileChange}
+                value={props.state.newProfilePost}
               />
               <button
                 id="save"

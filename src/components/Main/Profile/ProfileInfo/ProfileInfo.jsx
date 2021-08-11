@@ -32,7 +32,7 @@ const ProfileInfo = (props) => {
             popup: false,
           })
         }
-        updateNewName={props.updateNewName}
+        updateProfile={props.updateProfile}
         updateNewPost={props.updateNewPost}
         state={props.state}
         addPost={props.addPost}
