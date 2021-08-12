@@ -7,7 +7,7 @@ import {
   addPlace,
   addPost,
   removeItem,
-  updateNewPost,
+  updatePlaces,
   updateProfile,
 } from "./Redux/state";
 
@@ -18,7 +18,7 @@ export let rerenderEntireTree = (state) => {
         <App
           state={state}
           updateProfile={updateProfile}
-          updateNewPost={updateNewPost}
+          updatePlaces={updatePlaces}
           addPost={addPost}
           addPlace={addPlace}
           removeItem={removeItem}

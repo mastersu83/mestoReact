@@ -27,6 +27,8 @@ let state = {
       link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
     },
   ],
+  newPlaceName: "",
+  newPlaceLink: "",
   newProfileName: "",
   newProfilePost: "",
   name: "Жак-Ив Кусто",
@@ -35,23 +37,24 @@ let state = {
 
 window.state = state;
 
-export let addPlace = (newNameText, newLinkText) => {
-  let newPlace = {
-    name: newNameText,
-    link: newLinkText,
-  };
-  state.item.unshift(newPlace);
-  rerenderEntireTree(state);
+export let addPlace = () => {
+  if (state.newPlaceName.length && state.newPlaceLink.length !== 0) {
+    let newPlace = {
+      name: state.newPlaceName,
+      link: state.newPlaceLink,
+    };
+    state.item.unshift(newPlace);
+    rerenderEntireTree(state);
+  }
 };
 
-export let addPost = (newNameText, newPostText) => {
-  // let newItem = {
-  //   name: newNameText,
-  //   link: newPostText,
-  // };
-  state.name = newNameText;
-  state.post = newPostText;
-  rerenderEntireTree(state);
+export let addPost = () => {
+  if (state.newProfileName.length && state.newProfilePost.length !== 0) {
+    state.name = state.newProfileName;
+    state.post = state.newProfilePost;
+    rerenderEntireTree(state);
+  } else {
+  }
 };
 
 export let removeItem = () => {
@@ -64,8 +67,9 @@ export let updateProfile = (newNameTextChange, newPostTextChange) => {
   state.newProfilePost = newPostTextChange;
   rerenderEntireTree(state);
 };
-export let updateNewPost = (newText) => {
-  state.post = newText;
+export let updatePlaces = (newNameTextChange, newPostTextChange) => {
+  state.newPlaceName = newNameTextChange;
+  state.newPlaceLink = newPostTextChange;
   rerenderEntireTree(state);
 };
 

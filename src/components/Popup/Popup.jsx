@@ -7,9 +7,7 @@ const Popup = (props) => {
   let newPost = React.createRef();
 
   let addPost = () => {
-    let newNameText = newName.current.value;
-    let newPostText = newPost.current.value;
-    props.addPost(newNameText, newPostText);
+    props.addPost();
   };
 
   let onProfileChange = () => {

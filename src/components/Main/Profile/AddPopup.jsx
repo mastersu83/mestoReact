@@ -29,8 +29,7 @@ const AddPopup = (props) => {
           })
         }
         state={props.state}
-        updateNewName={props.updateNewName}
-        updateNewPost={props.updateNewPost}
+        updatePlaces={props.updatePlaces}
         addPost={props.addPost}
         addPlace={props.addPlace}
       />

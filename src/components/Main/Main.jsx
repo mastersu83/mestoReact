@@ -9,7 +9,7 @@ const Main = (props) => {
         <Profile
           state={props.state}
           updateProfile={props.updateProfile}
-          updateNewPost={props.updateNewPost}
+          updatePlaces={props.updatePlaces}
           addPost={props.addPost}
           addPlace={props.addPlace}
         />

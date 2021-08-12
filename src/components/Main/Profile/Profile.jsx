@@ -12,14 +12,12 @@ const Profile = (props) => {
         <ProfileInfo
           state={props.state}
           updateProfile={props.updateProfile}
-          updateNewPost={props.updateNewPost}
           addPost={props.addPost}
           addPlace={props.addPlace}
         />
         <AddPopup
           state={props.state}
-          updateNewName={props.updateNewName}
-          updateNewPost={props.updateNewPost}
+          updatePlaces={props.updatePlaces}
           addPost={props.addPost}
           addPlace={props.addPlace}
         />

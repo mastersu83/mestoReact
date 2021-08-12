@@ -7,9 +7,13 @@ const PopupAdd = (props) => {
   let newLink = React.createRef();
 
   let addPlace = () => {
-    let newNameText = newName.current.value;
-    let newLinkText = newLink.current.value;
-    props.addPlace(newNameText, newLinkText);
+    props.addPlace();
+  };
+
+  let onPlaceAdd = () => {
+    let newNameTextChange = newName.current.value;
+    let newPostTextChange = newLink.current.value;
+    props.updatePlaces(newNameTextChange, newPostTextChange);
   };
 
   return (
@@ -33,6 +37,8 @@ const PopupAdd = (props) => {
                 placeholder="Название"
                 required
                 ref={newName}
+                onChange={onPlaceAdd}
+                value={props.state.newPlaceName}
               />
               <input
                 id="input-post"
@@ -42,6 +48,7 @@ const PopupAdd = (props) => {
                 placeholder="Ссылка на картинку"
                 required
                 ref={newLink}
+                onChange={onPlaceAdd}
               />
               <button
                 id="save"

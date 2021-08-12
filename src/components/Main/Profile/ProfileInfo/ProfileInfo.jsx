@@ -3,6 +3,7 @@ import editBtn from "../../../../img/edit-btn.svg";
 import ProfileData from "./ProfileData/ProfileData";
 import React, { useState } from "react";
 import Popup from "../../../Popup/Popup";
+import { updatePlaces, updateProfile } from "../../../../Redux/state";
 
 const ProfileInfo = (props) => {
   const [popup, setPopup] = useState({
@@ -32,8 +33,8 @@ const ProfileInfo = (props) => {
             popup: false,
           })
         }
-        updateProfile={props.updateProfile}
-        updateNewPost={props.updateNewPost}
+        updateProfile={updateProfile}
+        updatePlaces={updatePlaces}
         state={props.state}
         addPost={props.addPost}
         addPlace={props.addPlace}
