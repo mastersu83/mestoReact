@@ -10,7 +10,7 @@ const PopupAdd = (props) => {
     props.addPlace();
   };
 
-  let onPlaceAdd = () => {
+  let onPlaceChange = () => {
     let newNameTextChange = newName.current.value;
     let newPostTextChange = newLink.current.value;
     props.updatePlaces(newNameTextChange, newPostTextChange);
@@ -30,28 +30,25 @@ const PopupAdd = (props) => {
             <form id="formEdit" className="popup__formEdit">
               <div className="popup__title">Новое место</div>
               <input
-                id="input-name"
                 className="popup__input-nameEdit popup__input"
                 form="formEdit"
                 type="text"
                 placeholder="Название"
                 required
                 ref={newName}
-                onChange={onPlaceAdd}
+                onChange={onPlaceChange}
                 value={props.state.newPlaceName}
               />
               <input
-                id="input-post"
                 className="popup__input-postEdit popup__input"
                 form="formEdit"
                 type="text"
                 placeholder="Ссылка на картинку"
                 required
                 ref={newLink}
-                onChange={onPlaceAdd}
+                onChange={onPlaceChange}
               />
               <button
-                id="save"
                 className="popup__submit"
                 form="formEdit"
                 type="submit"

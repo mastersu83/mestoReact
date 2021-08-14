@@ -57,8 +57,8 @@ export let addPost = () => {
   }
 };
 
-export let removeItem = () => {
-  state.item.pop();
+export let removeItem = (e) => {
+  e.target.parentNode.remove();
   rerenderEntireTree(state);
 };
 
